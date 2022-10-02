@@ -116,3 +116,27 @@ Resultado:
   ]
 }
 ```
+E o codigo que voce pode clicar e pegar este Json ai para manipular
+```
+procedure TFrm.btnRecClick(Sender: TObject);
+var
+  vJson, vItem: TJSONObject;
+  vItens: TJSONArray;
+  vI: Integer;
+begin
+  PageControl.ActivePage := TabSheet2;
+  MemoRecebendo.Lines.Clear;
+  vJson := TJsonObject(TJSONObject.ParseJSONValue(TEncoding.ASCII.GetBytes(MemoGerando.Lines.Text),0));
+  try
+    vItens := TJSONArray(vJson.Get('Itens').JsonValue);
+    for vI := 0 to vItens.Size - 1 do
+    begin
+      vItem := vItens.Get(vI) as TJSONObject;
+      MemoRecebendo.Lines.Add(vItem.Get('Id').JsonValue.Value + ' - ' +
+                              vItem.Get('Guid').JsonValue.Value)
+    end;
+  finally
+    FreeAndNil(vJson);
+  end;
+end;
+```
