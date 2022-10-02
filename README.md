@@ -38,8 +38,10 @@ begin
   end;
 end;
 
-Resultado:
+
+
 ```
+Resultado:
 {
   "AlgumaCoisa": "AlgumValor",
   "Itens": [
