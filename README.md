@@ -37,11 +37,9 @@ begin
     FreeAndNil(JSonObject);
   end;
 end;
-
-
-
 ```
 Resultado:
+```
 {
   "AlgumaCoisa": "AlgumValor",
   "Itens": [
@@ -117,3 +115,4 @@ Resultado:
     }
   ]
 }
+```
