@@ -48,7 +48,11 @@ begin
   JSonObject := TJSONObject.Create;
   try
     JSonArray  := TJSONArray.Create;
-    JSonObject.AddPair(TJSONPair.Create('AlgumaCoisa', 'AlgumValor'));
+    JSonObject.AddPair(TJSONPair.Create('a', 'AlgumValor'));
+    JSonObject.AddPair(TJSONPair.Create('b', 'AlgumValor'));
+    JSonObject.AddPair(TJSONPair.Create('c', 'AlgumValor'));
+    JSonObject.AddPair(TJSONPair.Create('e', 'AlgumValor'));
+    JSonObject.AddPair(TJSONPair.Create('d', 'AlgumValor'));
 
     JSonObject.AddPair('Itens', JSonArray);
     for vI :=1 to 10 do
@@ -60,6 +64,7 @@ begin
       JSon.AddPair(TJSONPair.Create('Null',  TJSONNull.Create));
       JSon.AddPair(TJSONPair.Create('True',  TJSONTrue.Create));
       JSon.AddPair(TJSONPair.Create('False', TJSONFalse.Create));
+      JSon.AddPair(TJSONPair.Create('NomeAssociado', TJSONString.Create('TABELA.momass')));
       JSonArray.AddElement(JSon);
     end;
 

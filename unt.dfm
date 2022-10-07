@@ -20,11 +20,9 @@ object Frm: TFrm
     Top = 41
     Width = 595
     Height = 427
-    ActivePage = TabSheet2
+    ActivePage = TabSheet1
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 796
-    ExplicitHeight = 635
     object TabSheet1: TTabSheet
       Caption = ' Gerando '
       object Panel2: TPanel
@@ -58,8 +56,6 @@ object Frm: TFrm
     object TabSheet2: TTabSheet
       Caption = ' Recebendo '
       ImageIndex = 1
-      ExplicitWidth = 788
-      ExplicitHeight = 607
       object Panel3: TPanel
         Left = 0
         Top = 0
@@ -72,8 +68,6 @@ object Frm: TFrm
         Padding.Right = 5
         Padding.Bottom = 5
         TabOrder = 0
-        ExplicitWidth = 788
-        ExplicitHeight = 607
         object MemoRecebendo: TMemo
           Left = 5
           Top = 5
@@ -87,8 +81,6 @@ object Frm: TFrm
           Font.Style = []
           ParentFont = False
           TabOrder = 0
-          ExplicitWidth = 778
-          ExplicitHeight = 597
         end
       end
     end
@@ -102,7 +94,6 @@ object Frm: TFrm
     BevelOuter = bvNone
     Caption = 'https://jsonformatter.org/'
     TabOrder = 1
-    ExplicitWidth = 796
     object BtnGer: TButton
       Left = 9
       Top = 9
